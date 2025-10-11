@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            margin: 0;
+            font-family: "Montserrat";
+            background-image: url(/assets/header-bg-color.png);
+         }
+
+        ul, li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+        }
+        
+        .main-header {
+            display: flex;                
+            justify-content: space-between; 
+            align-items: center;          
+            padding: 15px 40px;          
+            background-color: #ffffff;   
+        }
+
+        .logo img {
+        height: 30px; 
+        display: block; 
+        }
+
+
+        .navbar {
+            background-color: #faf8f8;
+            width: 500px;
+            align-items: center;
+            margin: 10px auto; 
+            padding: 20px 0px;
+            display: flex;
+            border-radius: 50px;
+            box-shadow: 0 0px 50px rgba(0,0,0,0.20);
+            justify-content: center; 
+        }
+        
+
+        .navbar ul {
+          display: flex;
+          align-items: center;
+          gap: 40px; 
+        }
+
+        .navbar li {
+          color: rgb(0, 0, 0);
+          cursor: pointer;
+          font-weight: 500;
+          font-size: 16px;
+          position: relative;
+        }
+
+        .dropdown {
+          position: relative;
+        }
+
+        .dropdown-btn {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .dropdown-items {
+          display: none;
+          position: absolute;
+          top: 20px;
+          background-color: #ffffff;
+          border-radius: 34px;
+          padding: 10px 0;
+          min-width: 160px;
+          box-shadow: 0 0px 50px rgba(0,0,0,0.20);
+        }
+
+        .dropdown-items ul {
+          display: block;
+        }
+
+        .dropdown-items li {
+          padding: 8px 16px;
+        }
+
+        .dropdown-items li a {
+          color: rgb(0, 0, 0);
+        }
+
+        .dropdown-items li:hover {
+          background-color: #d1cfcf;
+          border-radius: 34px;
+        }
+
+        .dropdown:hover .dropdown-items {
+          display: block;
+        }
+
+        .right-btn {
+          width: 170px;
+          background-color: #f5f5f5;
+          height: 55px;
+          border-radius: 25px;
+          box-shadow: 0 0px 50px rgba(0,0,0,0.25);
+          border: none;
+          font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+      <a href="#" class="logo">
+        <img src="/assets/logo.png" alt="logo">
+      </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <div class="dropdown">
+                    <li class="dropdown-btn">About Me<i class="ri-arrow-down-s-line"></i></li>
+                    <div class="dropdown-items">
+                        <ul>
+                        <li><a href="">My Personal</a></li>
+                        <li><a href="">My Skill</a></li>
+                        <li><a href="">My Experience</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <li>Contact Me</li>
+            </ul>
+        </nav>
+
+        <button class="right-btn"><a href="login.html">Contact<i class="ri-arrow-right-up-line"></i></a></button>
+    </header>
+</body>
+</html>
