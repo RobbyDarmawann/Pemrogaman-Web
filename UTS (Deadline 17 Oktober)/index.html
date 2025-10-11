@@ -8,6 +8,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: "Montserrat";
@@ -30,14 +34,15 @@
             justify-content: space-between; 
             align-items: center;          
             padding: 15px 40px;          
-            background-color: #ffffff;   
+            background-color: inherit;   
+            position: sticky;
+            top: 0;                   
         }
 
         .logo img {
         height: 30px; 
         display: block; 
         }
-
 
         .navbar {
             background-color: #faf8f8;
@@ -51,7 +56,6 @@
             justify-content: center; 
         }
         
-
         .navbar ul {
           display: flex;
           align-items: center;
@@ -116,33 +120,324 @@
           box-shadow: 0 0px 50px rgba(0,0,0,0.25);
           border: none;
           font-size: 15px;
+          font-family: "montserrat";
         }
+
+        main {
+            width: 100%;
+        }
+
+        .hero-container, .about-container, .services-section {
+            max-width: 1100px;
+            margin: 0 auto; 
+            padding: 0 20px;   
+        }
+
+
+        .hero-section {
+            min-height: 90vh; 
+            display: flex;
+            align-items: center; 
+            padding: 60px 0;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px; 
+        }
+
+        .hero-text {
+            flex: 1; 
+            max-width: 550px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-button:hover {
+            background-color: #555;
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 450px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 30px; 
+        }
+
+        .about-section {
+             padding: 80px 20px;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .about-text {
+            flex: 1.2; 
+            max-width: 600px;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .about-text h3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .services-section {
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 250px;
+        }
+
+        .services-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; 
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .service-card i {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .contact-section {
+            padding: 80px 20px;
+            margin-top: 300px;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .social-media-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-media-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            color: #333;
+            font-size: 28px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .social-media-links a:hover {
+            transform: translateY(-5px); 
+            background-color: #333;
+            color: #ffffff;
+        }
+
+            footer {
+                text-align: center;
+                font-weight: bold;
+                padding: 25px;
+                margin-top: 60px;
+                background-color: #f5f5f5;
+                color: #555;
+                font-size: 14px;
+            }
 
     </style>
 </head>
 <body>
     <header class="main-header">
-      <a href="#" class="logo">
+      <a href="#home" class="logo">
         <img src="/assets/logo.png" alt="logo">
       </a>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#home">Beranda</a></li>
                 <div class="dropdown">
-                    <li class="dropdown-btn">About Me<i class="ri-arrow-down-s-line"></i></li>
+                    <li class="dropdown-btn">Tentang<i class="ri-arrow-down-s-line"></i></li>
                     <div class="dropdown-items">
                         <ul>
-                        <li><a href="">My Personal</a></li>
-                        <li><a href="">My Skill</a></li>
-                        <li><a href="">My Experience</a></li>
+                        <li><a href="#about">Tentang Saya</a></li>
+                        <li><a href="#services">Keahlian</a></li>
                         </ul>
                     </div>
                 </div>
-                <li>Contact Me</li>
+                <li><a href="#contact">Kontak</a></li>
             </ul>
         </nav>
-
-        <button class="right-btn"><a href="login.html">Contact<i class="ri-arrow-right-up-line"></i></a></button>
+        <button class="right-btn"><a href="#">Contact<i class="ri-arrow-right-up-line"></i></a></button> 
     </header>
+    <main>
+</section>
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Halo, Saya Robby Darmawan</h1>
+                <p>Seorang Mahasiswa Universitas Negeri Gorontalo yang bersemangat menciptakan pengalaman digital yang modern dan intuitif. Selamat datang di portofolio saya.</p>
+                <a href="#services" class="cta-button">Lihat Fokus Saya Saat Ini <i class="ri-arrow-down-line"></i></a>
+            </div>
+            <div class="hero-image">
+                <img src="/assets/profile-img.png" alt="Foto Profil BhadeThuru">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="/assets/user-image.png" alt="Foto Tentang Saya">
+        </div>
+        <div class="about-text">
+            <h2>Tentang Saya</h2>
+            <h3></h3>
+            <p>
+                Saat ini saya seorang mahasiswa yang mendalami dunia teknologi, dengan fokus utama pada Web Development, Mobile APP Development dan Desain UI/UX. Saya percaya bahwa desain yang baik bukan hanya tentang estetika, tetapi juga tentang menciptakan solusi yang fungsional dan mudah digunakan.
+            </p>
+        </div>
+    </div>
+    <section id="services" class="services-section">
+        <h2>Fokus Saat Ini</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="ri-pencil-ruler-2-line"></i>
+                <h3>UI/UX Design</h3>
+                <p>Merancang antarmuka yang menarik, fungsional, dan ramah pengguna untuk aplikasi web dan mobile.</p>
+            </div>
+            <div class="service-card">
+                <i class="ri-code-s-slash-line"></i>
+                <h3>Web Development</h3>
+                <p>Membangun website yang responsif dan berkinerja tinggi dari awal hingga akhir menggunakan teknologi terbaru.</p>
+            </div>
+            <div class="service-card">
+                <i class="ri-smartphone-line"></i>
+                <h3>Mobile APP Development</h3>
+                <p>Menciptakan aplikasi mobile yang intuitif dan fungsional untuk platform Android</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2>Hubungi Saya</h2>
+        <p>Anda bisa menemukan saya di platform berikut:</p>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/robby_darmawan_/" target="_blank" title="Instagram">
+                <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://www.facebook.com/razerrrku/" target="_blank" title="Facebook">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+             <a href="https://github.com/RobbyDarmawann" target="_blank" title="GitHub">
+            <i class="ri-github-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <p>&copy; 2025. Dibuat oleh @Robby_Darmawan_.</p>
+</footer>
 </body>
 </html>
