@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+    <div class="form">
     <form action="">
         <label for="Name">Name</label>
         <input type="text" name="Name" placeholder="isi nama anda disini">
-        <label for=""></label>
-        <label for="Male">Laki-Laki</label>
-        <input type="radio" id="Male">
-        <label for="Female">Perempuan</label>
-        <input type="radio" id="Female">
+        <br>
+        <input type="radio" name="gender" value="male" />
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" value="female"/>
+        <label for="gender">Female</label> 
         <legend>Pilih Hobi anda</legend>
         <label for="Hobi">Makan </label>
         <input type="checkbox" name="" id="Hobi">
@@ -22,5 +25,7 @@
         <label for="Hobi">Olahraga </label>
         <input type="checkbox" name="" id="Hobi">
     </form>
+    </div>
+    </main>
 </body>
 </html>
